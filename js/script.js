@@ -171,6 +171,33 @@
 
 
 // Dati due array di oggetti che rappresentano parti di una anagrafica di persone (nome, cognome, professione)
+// const array1 = [
+//     { nome: 'Topolino', cognome: 'Mouse', professione: 'Ingegnere' },
+//     { nome: 'Paperino', cognome: 'Duck', professione: 'Medico' },
+//     { nome: 'Pippo', cognome: 'Goofy', professione: 'Architetto' },
+// ];
+
+// console.log(array1);
+
+// const array2 = [
+//     { nome: 'Minnie', cognome: 'Mouse', professione: 'Avvocato' },
+//     { nome: 'Paperina', cognome: 'Duck', professione: 'Infermiere' },
+//     { nome: 'Pluto', cognome: 'Dog', professione: 'Docente' },
+// ];
+
+// console.log(array2);
+
+// // crea un array che contenga tutti gli elementi (con la proprietà spread)
+// const array3 = [...array1, ...array2];
+
+// //fai un log di questo ultimo array.
+// console.log(array3);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Stampa in una lista in pagina l’anagrafica completa ottenuta nel precedente, provando ad usare destructuring e template literal.
 const array1 = [
     { nome: 'Topolino', cognome: 'Mouse', professione: 'Ingegnere' },
     { nome: 'Paperino', cognome: 'Duck', professione: 'Medico' },
@@ -192,3 +219,15 @@ const array3 = [...array1, ...array2];
 
 //fai un log di questo ultimo array.
 console.log(array3);
+
+// Stampa in una lista in pagina l’anagrafica completa ottenuta nel precedente
+const listaUser = document.getElementById('listauser');
+
+array3.forEach(user => {
+    // destructuring
+    const { nome, cognome, professione } = user;
+    // creo "li" con template literal
+    const listItem =`<li>${nome} ${cognome} : ${professione}</li>`
+    // assegno a UL la lista in html
+    listaUser.innerHTML += listItem
+});
