@@ -198,36 +198,58 @@
 
 
 //Stampa in una lista in pagina l’anagrafica completa ottenuta nel precedente, provando ad usare destructuring e template literal.
-const array1 = [
-    { nome: 'Topolino', cognome: 'Mouse', professione: 'Ingegnere' },
-    { nome: 'Paperino', cognome: 'Duck', professione: 'Medico' },
-    { nome: 'Pippo', cognome: 'Goofy', professione: 'Architetto' },
-];
+// const array1 = [
+//     { nome: 'Topolino', cognome: 'Mouse', professione: 'Ingegnere' },
+//     { nome: 'Paperino', cognome: 'Duck', professione: 'Medico' },
+//     { nome: 'Pippo', cognome: 'Goofy', professione: 'Architetto' },
+// ];
 
-console.log(array1);
+// console.log(array1);
 
-const array2 = [
-    { nome: 'Minnie', cognome: 'Mouse', professione: 'Avvocato' },
-    { nome: 'Paperina', cognome: 'Duck', professione: 'Infermiere' },
-    { nome: 'Pluto', cognome: 'Dog', professione: 'Docente' },
-];
+// const array2 = [
+//     { nome: 'Minnie', cognome: 'Mouse', professione: 'Avvocato' },
+//     { nome: 'Paperina', cognome: 'Duck', professione: 'Infermiere' },
+//     { nome: 'Pluto', cognome: 'Dog', professione: 'Docente' },
+// ];
 
-console.log(array2);
+// console.log(array2);
 
-// crea un array che contenga tutti gli elementi (con la proprietà spread)
-const array3 = [...array1, ...array2];
+// // crea un array che contenga tutti gli elementi (con la proprietà spread)
+// const array3 = [...array1, ...array2];
 
-//fai un log di questo ultimo array.
-console.log(array3);
+// //fai un log di questo ultimo array.
+// console.log(array3);
 
-// Stampa in una lista in pagina l’anagrafica completa ottenuta nel precedente
-const listaUser = document.getElementById('listauser');
+// // Stampa in una lista in pagina l’anagrafica completa ottenuta nel precedente
+// const listaUser = document.getElementById('listauser');
 
-array3.forEach(user => {
-    // destructuring
-    const { nome, cognome, professione } = user;
-    // creo "li" con template literal
-    const listItem =`<li>${nome} ${cognome} : ${professione}</li>`
-    // assegno a UL la lista in html
-    listaUser.innerHTML += listItem
-});
+// array3.forEach(user => {
+//     // destructuring
+//     const { nome, cognome, professione } = user;
+//     // creo "li" con template literal
+//     const listItem =`<li>${nome} ${cognome} : ${professione}</li>`
+//     // assegno a UL la lista in html
+//     listaUser.innerHTML += listItem
+// });
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Crea una funzione che accetti un numero indefinito di numeri e ne ritorni la somma.
+// Chiedi all'utente di inserire tre numeri attraverso i prompt
+
+// Chiedi all'utente di inserire tre numeri attraverso i prompt
+const num1 = parseInt(prompt("Inserisci un numero:"));
+const num2 = parseInt(prompt("Inserisci un numero:"));
+const num3 = parseInt(prompt("Inserisci un numero:"));
+
+// Funzione che calcola la somma di tre numeri
+function calcola(a, b, c) {
+    return a + b + c;
+}
+
+// Calcola la somma dei numeri inseriti
+const somma = calcola(num1, num2, num3);
+
+// Mostra il risultato
+console.log(`La somma di ${num1}, ${num2} e ${num3} è: ${somma}`);
