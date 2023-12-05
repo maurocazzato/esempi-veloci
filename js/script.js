@@ -18,7 +18,7 @@
 // }
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // L’utente inserisce due parole in successione, con due prompt.
 // Il software stampa prima la parola più corta, poi la parola più lunga.
@@ -40,7 +40,7 @@
 //     console.log(second + " è più lunga di " + first);
 // }
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Il software deve chiedere per 5 volte all’utente di inserire un numero. 
 //  Il programma stampa la somma di tutti i numeri inseriti.
@@ -56,6 +56,7 @@
 
 // console.log("il risultato è: "+result);
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Crea un array vuoto.
 // Chiedi per 6 volte all’utente di inserire un numero,
@@ -76,7 +77,7 @@
 // console.log(list);
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Crea un array di oggetti che rappresentano degli animali.
 // Ogni animale ha un nome, una famiglia e una classe.
@@ -104,7 +105,7 @@
 // console.log(animali, mammiferi);
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // Crea un array di oggetti che rappresentano delle persone.
@@ -130,6 +131,7 @@
 
 // console.log(personeOk);
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Crea un array composto da 10 automobili.
 // Ogni oggetto automobile avrà le seguenti proprietà: marca, modello e alimentazione (benzina, diesel, gpl, elettrico, metano).
@@ -139,25 +141,54 @@
 // Infine stampa separatamente i 3 array.
 
 
-const cars = [
-    { brand: "Toyota", model: "Camry", fuel: "Gasoline" },
-    { brand: "Honda", model: "Civic", fuel: "Electric" },
-    { brand: "Ford", model: "Focus", fuel: "Hybrid" },
-    { brand: "Chevrolet", model: "Malibu", fuel: "Diesel" },
-    { brand: "Tesla", model: "Model 3", fuel: "Ethanol" },
-    { brand: "Nissan", model: "Altima", fuel: "Gasoline" },
-    { brand: "BMW", model: "3 Series", fuel: "Electric" },
-    { brand: "Mercedes-Benz", model: "C-Class", fuel: "Hybrid" },
-    { brand: "Audi", model: "A4", fuel: "Gasoline" },
-    { brand: "Volkswagen", model: "Passat", fuel: "Diesel" }
+// const cars = [
+//     { brand: "Toyota", model: "Camry", fuel: "Gasoline" },
+//     { brand: "Honda", model: "Civic", fuel: "Electric" },
+//     { brand: "Ford", model: "Focus", fuel: "Hybrid" },
+//     { brand: "Chevrolet", model: "Malibu", fuel: "Diesel" },
+//     { brand: "Tesla", model: "Model 3", fuel: "Ethanol" },
+//     { brand: "Nissan", model: "Altima", fuel: "Gasoline" },
+//     { brand: "BMW", model: "3 Series", fuel: "Electric" },
+//     { brand: "Mercedes-Benz", model: "C-Class", fuel: "Hybrid" },
+//     { brand: "Audi", model: "A4", fuel: "Gasoline" },
+//     { brand: "Volkswagen", model: "Passat", fuel: "Diesel" }
+// ];
+
+// // Separate arrays for gasoline, diesel, and other fuels
+// const gasolineCars = cars.filter(car => car.fuel === "Gasoline");
+// const dieselCars = cars.filter(car => car.fuel === "Diesel");
+// const otherFuelCars = cars.filter(car => !["Gasoline", "Diesel"].includes(car.fuel));
+
+// // Print the filtered arrays
+// console.log("Gasoline Cars:", gasolineCars);
+// console.log("Diesel Cars:", dieselCars);
+// console.log("Other Fuel Cars:", otherFuelCars);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Dati due array di oggetti che rappresentano parti di una anagrafica di persone (nome, cognome, professione),
+// crea un array che contenga tutti gli elementi di entrambi e fai un log di questo ultimo array.
+
+
+// Dati due array di oggetti che rappresentano parti di una anagrafica di persone (nome, cognome, professione)
+const array1 = [
+    { nome: 'Topolino', cognome: 'Mouse', professione: 'Ingegnere' },
+    { nome: 'Paperino', cognome: 'Duck', professione: 'Medico' },
+    { nome: 'Pippo', cognome: 'Goofy', professione: 'Architetto' },
 ];
 
-// Separate arrays for gasoline, diesel, and other fuels
-const gasolineCars = cars.filter(car => car.fuel === "Gasoline");
-const dieselCars = cars.filter(car => car.fuel === "Diesel");
-const otherFuelCars = cars.filter(car => !["Gasoline", "Diesel"].includes(car.fuel));
+console.log(array1);
 
-// Print the filtered arrays
-console.log("Gasoline Cars:", gasolineCars);
-console.log("Diesel Cars:", dieselCars);
-console.log("Other Fuel Cars:", otherFuelCars);
+const array2 = [
+    { nome: 'Minnie', cognome: 'Mouse', professione: 'Avvocato' },
+    { nome: 'Paperina', cognome: 'Duck', professione: 'Infermiere' },
+    { nome: 'Pluto', cognome: 'Dog', professione: 'Docente' },
+];
+
+console.log(array2);
+
+// crea un array che contenga tutti gli elementi (con la proprietà spread)
+const array3 = [...array1, ...array2];
+
+//fai un log di questo ultimo array.
+console.log(array3);
